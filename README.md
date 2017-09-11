@@ -1,6 +1,6 @@
 # 2017 IT Race with Dubbo Startup
 
-准备的Java 开发框架。
+基于 `[spring-boot-starter-dubbo](https://github.com/teaey/spring-boot-starter-dubbo)` 准备的 Dubbo 开发框架。
 
 ## 初始化 IDE 配置
 ``` shell

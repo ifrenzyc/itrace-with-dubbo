@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @EntityScan("com.eshore.itrace")
 public class ItraceWithDubboConsumerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ItraceWithDubboConsumerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ItraceWithDubboConsumerApplication.class, args);
+    }
 }

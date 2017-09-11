@@ -9,19 +9,17 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
-@EntityScan("com.eshore.itrace")
+@EntityScan("com.eshore.itrace.api.entity")
 public class ItraceWithDubboProviderApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder().sources(ItraceWithDubboProviderApplication.class)
-                .web(false)  // 使用非 web 环境
-                .run(args);
+                .web(false).run(args);
     }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-
-        // dubbo 底层netty服务也是异步的，所以需要在ApplicationContext构建后阻塞
+        // 需要在 ApplicationContext 构建后阻塞
         Thread.currentThread().join();
     }
 }
