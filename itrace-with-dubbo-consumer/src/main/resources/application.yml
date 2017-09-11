@@ -1,0 +1,25 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/itrace_startup
+        username: root
+        password: Aa123456
+
+    jpa:
+        properties:
+            hibernate:
+                hbm2ddl:
+                    auto: update
+
+    dubbo:
+        application:
+            name: itrace-with-dubbo-consumer
+        registry:
+            address: zookeeper://127.0.0.1:2181
+        protocol:
+            name: dubbo
+            port: 20880
+        scan: com.eshore.itrace.consumer.controller
+
+
+debug: false
